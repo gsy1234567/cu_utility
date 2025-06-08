@@ -1,6 +1,6 @@
 #include "cu_ndarray.cuh"
 
-using ndarray = gsy::CuNDArray<int, 3, false>;
+using ndarray = gsy::CuNDArray<int, 3, true, gsy::DeviceMemory>;
 
 __global__ void TestStoreKernel(const ndarray::MetaData __grid_constant__ params);
 __global__ void TestLoadKernel(const ndarray::MetaData __grid_constant__ params);
